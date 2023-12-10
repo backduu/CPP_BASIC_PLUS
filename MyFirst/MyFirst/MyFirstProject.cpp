@@ -1,11 +1,25 @@
-#include <iostream>						// 선행 처리 지시자
+#include <iostream>						
 using namespace std;
 
-int main()								// 함수머리
-{										// 함수 몸체의 시작
-	cout << "welcome to c++ world!";	//
-	cout << endl;						// 새로운 행 시작
-	cout << "haha";				
-	return 0;							// main() 종료
-}										// 함수 몸체의 끝
+bool setTime(double time, int minute);
+int main()								
+{			
+	double time;
+	int minute;
+	cout << "시간 값을 입력하시오.";
+	cin >> time;
+	cout << "분 값을 입력하시오.";
+	cin >> minute;
+
+	bool flag = setTime(time, minute);
+	if (flag) cout << "\nset time is good";
+	else cout << "\nbad!!";
+	return 0;							
+}					
+
+bool setTime(double time, int minute) {
+	cout << time << " : " << minute;
+
+	return true;
+}
 
